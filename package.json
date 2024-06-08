@@ -1,0 +1,27 @@
+{
+  "name": "node.js-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axmmxa/Node.js-server.git"
+  },
+  "keywords": [],
+  "author": "Alexander Much",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axmmxa/Node.js-server/issues"
+  },
+  "homepage": "https://github.com/axmmxa/Node.js-server#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3"
+  }
+}
