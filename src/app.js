@@ -5,12 +5,16 @@ console.log("App loaded")
 import {server, PORT} from "./server"
 import { ProfileRoutes } from "../routes/profileRoutes"
 import MainLayouts from "express-ejs-layouts"
+import express from "express"
 
 //Einstellung render engine
 server.use(MainLayouts)
 server.set("layout", "layouts/html")
 server.set("view engine", "ejs")
 
+
+//Statische Files
+server.use(express.static("views/public"))
 
 
 //+++Routen anlegen
