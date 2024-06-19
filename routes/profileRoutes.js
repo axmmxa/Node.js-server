@@ -2,10 +2,14 @@ import express from "express";
 
 export let ProfileRoutes = express.Router()
 
+let profile = "Alex"
+
 
 // use as url http://localhost:3000/profile?name=max
 ProfileRoutes.get("/profile", (req,res)=>{
-    res.render("main/profile")
+    res.render("main/profile", {
+        title:profile
+    })
     console.log(req.query.name)
 })
 
