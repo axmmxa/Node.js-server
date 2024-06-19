@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/axmmxa/Node.js-server#readme",
   "dependencies": {
+    "ejs": "^3.1.10",
     "esm": "^3.2.25",
     "express": "^4.19.2",
     "nodemon": "^3.1.3"

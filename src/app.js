@@ -1,29 +1,25 @@
 console.log("App loaded")
 
+
+// Server Einstellungen 
 import {server, PORT} from "./server"
+import { ProfileRoutes } from "../routes/profileRoutes"
+
+//Einstellung render engine
+server.set("view engine", "ejs")
+
 
 
 //+++Routen anlegen
 
 //main route
 server.get("/", (req,res,next)=>{
-    res.send("Das ist der Altrupedia Server")
+    res.render("main/index")
 })
 
 
 
-//dynamische route
-// use as url http://localhost:3000/profile?name=max
-server.get("/profile", (req,res)=>{
-    res.send("Moinsen User")
-    console.log(req.query.name)
-})
-
-
-server.get("/profile/:userid",(req,res,next)=>{
-    res.send("Hallo User")
-    console.log("User hat sich eingelogt", console.log(req.params.userid))
-})
+server.use(ProfileRoutes)
 
 
 
