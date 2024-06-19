@@ -23,6 +23,7 @@
     "ejs": "^3.1.10",
     "esm": "^3.2.25",
     "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1",
     "nodemon": "^3.1.3"
   }
 }

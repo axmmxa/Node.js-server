@@ -4,8 +4,11 @@ console.log("App loaded")
 // Server Einstellungen 
 import {server, PORT} from "./server"
 import { ProfileRoutes } from "../routes/profileRoutes"
+import MainLayouts from "express-ejs-layouts"
 
 //Einstellung render engine
+server.use(MainLayouts)
+server.set("layout", "layouts/html")
 server.set("view engine", "ejs")
 
 
@@ -14,7 +17,11 @@ server.set("view engine", "ejs")
 
 //main route
 server.get("/", (req,res,next)=>{
-    res.render("main/index")
+    res.render("main/index", {
+        name:"Stephan",
+        nachname:"Altrupedia",
+        title: "Index"
+    })
 })
 
 
